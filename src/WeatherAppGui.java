@@ -14,7 +14,7 @@ public class WeatherAppGui extends JFrame {
 
     public WeatherAppGui(){
         // setup our gui and add a title
-        super("Weather App");
+        super("Whether the Weather");
 
         // configure gui to end the program's process once it has been closed
         setDefaultCloseOperation(EXIT_ON_CLOSE);
