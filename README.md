@@ -1,8 +1,11 @@
 # Whether the Weather
 
 ### Description
-A weather application built with Java, Swing and Meteomatics API. This app provides real-time weather information for any location in the world. The JSON weather data is parsed and extracted from the Meteomatics API
-using the JSON Simple library. The weather data is then displayed in a user-friendly interface using JavaFX components. To fetch the JSON weather data, the app uses the HTTPURLConnection class, which is a part of Java's built-in library for making HTTP requests to fetch data from external APIs.
+A weather application built with Java, Swing and Meteomatics API. This app provides real-time weather information for 
+any location in the world. The JSON weather data is parsed and extracted from the Meteomatics API using the JSON Simple 
+library. The weather data is then displayed in a user-friendly interface using JavaFX components. To fetch the JSON 
+weather data, the app uses the <b>HTTPURLConnection</b> class, which is a part of Java's built-in library for making 
+HTTP requests to fetch data from external APIs.
 
 <br/>
 
@@ -16,10 +19,15 @@ using the JSON Simple library. The weather data is then displayed in a user-frie
 
 ### Launch & Structure
 
-#### Launch
-1. Open the `whether-the-weather` folder in your IDE
-2. Locate the `AppLauncher.java` file in the `src` folder
-3. Run the `AppLauncher.java` file
+#### IDE Launch
+1. Open the `whether-the-weather` folder in your IDE of choice (e.g., IntelliJ IDEA)
+2. Locate the `AppLauncher.java` file in the `src` folder; right-click and select "Run 'AppLauncher.main()'
+3. The app will then launch and fun can be had looking at the weather in different locations
+
+#### Terminal Launch
+1. Open the `whether-the-weather` folder in your terminal
+2. Run the `mvn clean install` command
+3. Run the `mvn exec:java -Dexec.mainClass="com.lylechristine.AppLauncher"` command
 4. The app will launch and display the main application window
 
 #### Structure
@@ -46,4 +54,4 @@ using the JSON Simple library. The weather data is then displayed in a user-frie
 <br >
 
 #### Acknowledgements
-This app was built using the work of TapTap's tutorials: https://www.youtube.com/watch?v=8ZcEYv2ezWc & https://github.com/curadProgrammer/WeatherAppGUI-Java
+This app was built using the inspiration of TapTap's tutorials: https://www.youtube.com/watch?v=8ZcEYv2ezWc & https://github.com/curadProgrammer/WeatherAppGUI-Java
