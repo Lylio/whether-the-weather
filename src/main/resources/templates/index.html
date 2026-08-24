@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Whether The Weather</title>
+
+    <link rel="stylesheet"
+          th:href="@{/style.css}">
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+
+        <h1>☀️ Whether The Weather</h1>
+
+        <p>
+            Search for any city and check the current weather.
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <form action="/weather"
+              method="get"
+              class="search-form">
+
+            <input
+                    type="text"
+                    name="city"
+                    placeholder="Enter a city..."
+                    th:value="${city}"
+                    required>
+
+            <button type="submit">
+                Get Weather
+            </button>
+
+        </form>
+
+
+        <div th:if="${error}"
+             class="error-card">
+
+            <h2>Weather Error</h2>
+
+            <p th:text="${error}">
+                Unable to retrieve weather data.
+            </p>
+
+        </div>
+
+
+        <section th:if="${weather}"
+                 class="weather-card">
+
+            <div class="location">
+
+                <h2 th:text="${weather.city}">
+                    City
+                </h2>
+
+                <p th:text="${weather.country}">
+                    Country
+                </p>
+
+            </div>
+
+
+            <div class="temperature">
+
+                <span th:text="${#numbers.formatDecimal(weather.temperature, 1, 1)}">
+                    20
+                </span>°C
+
+            </div>
+
+
+            <h3 th:text="${weather.weatherDescription}">
+                Weather conditions
+            </h3>
+
+
+            <div class="weather-grid">
+
+                <div class="weather-item">
+
+                    <span class="label">
+                        Feels Like
+                    </span>
+
+                    <strong>
+
+                        <span th:text="${#numbers.formatDecimal(weather.feelsLike, 1, 1)}">
+                            20
+                        </span>°C
+
+                    </strong>
+
+                </div>
+
+
+                <div class="weather-item">
+
+                    <span class="label">
+                        Humidity
+                    </span>
+
+                    <strong>
+
+                        <span th:text="${weather.humidity}">
+                            50
+                        </span>%
+
+                    </strong>
+
+                </div>
+
+
+                <div class="weather-item">
+
+                    <span class="label">
+                        Wind Speed
+                    </span>
+
+                    <strong>
+
+                        <span th:text="${#numbers.formatDecimal(weather.windSpeed, 1, 1)}">
+                            10
+                        </span>
+
+                        km/h
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Whether The Weather
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>

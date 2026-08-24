@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+            135deg,
+            #1e3c72,
+            #2a5298
+    );
+    color: #ffffff;
+}
+
+.page {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.search-form input {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.search-form button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #ffb703;
+    color: #222;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    transform: translateY(-2px);
+}
+
+.weather-card,
+.error-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 35px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow:
+            0 8px 30px
+            rgba(0, 0, 0, 0.2);
+}
+
+.error-card {
+    background: rgba(220, 53, 69, 0.85);
+}
+
+.location h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.location p {
+    margin-top: 0;
+    opacity: 0.8;
+}
+
+.temperature {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 25px 0 10px;
+}
+
+.weather-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns:
+            repeat(3, 1fr);
+    gap: 20px;
+}
+
+.weather-item {
+    background:
+            rgba(255, 255, 255, 0.12);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.label {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.weather-item strong {
+    font-size: 1.3rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form input,
+    .search-form button {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .temperature {
+        font-size: 4rem;
+    }
+}
