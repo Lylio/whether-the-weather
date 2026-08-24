@@ -1,3 +1,5 @@
+package com.lylechristine;
+
 import javax.swing.*;
 
 public class AppLauncher {

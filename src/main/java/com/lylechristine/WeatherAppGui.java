@@ -1,3 +1,5 @@
+package com.lylechristine;
+
 import org.json.simple.JSONObject;
 
 import javax.imageio.ImageIO;
@@ -8,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+
 
 public class WeatherAppGui extends JFrame {
     private JSONObject weatherData;
@@ -109,13 +112,30 @@ public class WeatherAppGui extends JFrame {
                 // retrieve weather data
                 weatherData = WeatherApp.getWeatherData(userInput);
 
-                // update gui
+                if (weatherData == null) {
+                    JOptionPane.showMessageDialog(
+                            WeatherAppGui.this,
+                            "Unable to retrieve weather data for \"" + userInput + "\".",
+                            "Weather Error",
+                            JOptionPane.ERROR_MESSAGE
+                    );
+                    return;
+                }
 
-                // update weather image
-                String weatherCondition = (String) weatherData.get("weather_condition");
+                String weatherCondition =
+                        (String) weatherData.get("weather_condition");
 
-                // depending on the condition, we will update the weather image that corresponds with the condition
-                switch(weatherCondition){
+                if (weatherCondition == null) {
+                    JOptionPane.showMessageDialog(
+                            WeatherAppGui.this,
+                            "Weather condition data was not returned by the weather service.",
+                            "Weather Error",
+                            JOptionPane.ERROR_MESSAGE
+                    );
+                    return;
+                }
+
+                switch(weatherCondition) {
                     case "Clear":
                         weatherConditionImage.setIcon(loadImage("src/assets/clear.png"));
                         break;
