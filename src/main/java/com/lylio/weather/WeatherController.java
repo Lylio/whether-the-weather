@@ -14,6 +14,11 @@ public class WeatherController {
         this.weatherService = weatherService;
     }
 
+    @GetMapping("/health")
+    public String health() {
+        return "Weather application is running!";
+    }
+
     @GetMapping("/")
     public String home() {
         return "index";
