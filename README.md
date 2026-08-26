@@ -11,17 +11,18 @@ HTTP requests to fetch data from external APIs.
 
 |              |                                                                                                                                      |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Demo Link    | [whether-the-weather.railway.internal](whether-the-weather.railway.internal)                                                         |
+| Demo Link    | [https://whether-the-weather-production.up.railway.app/](https://whether-the-weather-production.up.railway.app/)                     |
 | Tech Stack   | Java 18                                                                                                                              | 
-| Cloud Deploy | ![Railway.com](whether-the-weather.railway.internal) |
+| Cloud Deploy | https://whether-the-weather-production.up.railway.app/                                                                               |
 | Top Language | ![Github Language](https://img.shields.io/github/languages/top/lylio/whether-the-weather?style=for-the-badge)                        |
 | Last Commit  | ![Github Commit Activity](https://img.shields.io/github/last-commit/lylio/whether-the-weather/main?style=for-the-badge)              |
 
 ### Launch & Structure
 
-#### IDE Launch
+URL:
+https://whether-the-weather-production.up.railway.app/
 
-#### Terminal Launch
+This app was built with assistance from ChatGPT and deployed onto Railway.com: both excellent in the assistance of building and deploying Java/React applications.
 
 <br >
 
