@@ -1,0 +1,10 @@
+services:
+  whether-the-weather:
+    build: .
+    container_name: whether-the-weather
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    network_mode: host
+    
