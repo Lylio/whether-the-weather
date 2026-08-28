@@ -155,16 +155,15 @@
 
 
     <footer>
+    <p>
+        Whether The Weather
+    </p>
 
-        <p>
-            Whether The Weather
-              <span class="copyright">
-    © 2026 <a href="https://www.linkedin.com/in/lylechristine/" target="_blank">LYLE CHRISTINE</a>
-</span>
-        </p>
-          
-
-    </footer>
+    <span class="copyright">
+        © <span th:text="${#dates.year(#dates.createNow())}"></span>
+        <a href="https://www.linkedin.com/in/lylechristine/" target="_blank">LYLE CHRISTINE</a>
+    </span>
+</footer>
 
 </div>
 
