@@ -33,18 +33,18 @@ header h1 {
 
 .home-link,
 .home-link:visited,
-.home-link:hover,
 .home-link:active {
     color: inherit;
     text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
 .linkedin-link,
 .linkedin-link:visited,
-.linkedin-link:hover,
 .linkedin-link:active {
     color: inherit;
     text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
 header p {
