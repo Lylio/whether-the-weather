@@ -22,39 +22,6 @@ This app was built with assistance from ChatGPT and deployed onto Railway.com: b
 
 <br >
 
-Directory structure:
-└── lylio-whether-the-weather/
-    ├── README.md
-    ├── dependency-reduced-pom.xml
-    ├── Dockerfile
-    ├── pom.xml
-    ├── .dockerignore
-    ├── .java-version
-    └── src/
-        ├── main/
-        │   ├── java/
-        │   │   ├── AppLauncher.java
-        │   │   ├── WeatherApp.java
-        │   │   ├── WeatherAppGui.java
-        │   │   └── com/
-        │   │       └── lylio/
-        │   │           └── weather/
-        │   │               ├── WeatherApiException.java
-        │   │               ├── WeatherApplication.java
-        │   │               ├── WeatherController.java
-        │   │               ├── WeatherResponse.java
-        │   │               └── WeatherService.java
-        │   └── resources/
-        │       ├── application.properties
-        │       ├── static/
-        │       │   └── style.css
-        │       └── templates/
-        │           └── index.html
-        └── test/
-            └── java/
-                └── WeatherAppTest.java
-
-
 [![Architecture diagram of lylio/whether-the-weather](https://gitdiagram.com/lylio/whether-the-weather/diagram.png)](https://gitdiagram.com/lylio/whether-the-weather?utm_source=readme&utm_medium=picture)
 
 <img width="3874" height="6435" alt="diagram" src="https://github.com/user-attachments/assets/7b92cc88-0621-4e54-93b9-8520658f7fb9" />
