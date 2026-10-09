@@ -1,11 +1,7 @@
 # Whether the Weather
 
 ### Description
-A weather application built with Java, Swing and Meteomatics API. This app provides real-time weather information for 
-any location in the world. The JSON weather data is parsed and extracted from the Meteomatics API using the JSON Simple 
-library. The weather data is then displayed in a user-friendly interface using JavaFX components. To fetch the JSON 
-weather data, the app uses the <b>HTTPURLConnection</b> class, which is a part of Java's built-in library for making 
-HTTP requests to fetch data from external APIs.
+This repository contains two weather-app entry points: a Spring web application and a Swing desktop application. The web workflow accepts a city request, resolves its location, fetches current conditions, and renders a result or error. The desktop workflow launches a search GUI, fetches weather for the entered location, and updates its display. The sampled web service uses Open-Meteo geocoding and forecast endpoints; the legacy desktop client does too. The README’s API description differs from the sampled implementation. Unsampled template and styling behavior is not inferred beyond the controller’s view name.
 
 <br/>
 
